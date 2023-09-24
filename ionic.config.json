@@ -1,0 +1,7 @@
+{
+  "name": "devssr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
