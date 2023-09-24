@@ -11,10 +11,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "dev:ssr": "ng run app:serve-ssr",
-    "serve:ssr": "node dist/app/server/main.js",
+    "serve:ssr": "node dist/app/server/main.js", 
     "build:ssr": "ng build && ng run app:server",
     "prerender": "ng run app:prerender",
-    "postinstall": "npm run build:ssr"
+    "postinstall": "npm run build:ssr --configuration production"
   },
   "private": true,
   "dependencies": {
