@@ -372,8 +372,7 @@
    .card-sheet {
    
     min-height: 60vh;
-    max-height: 100%;
-    height: fit-content;
+    height:-moz-fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
