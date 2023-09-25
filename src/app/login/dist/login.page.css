@@ -1,0 +1,140 @@
+ion-content {
+  --ion-background-color:#111D12;
+}
+
+ion-select .alert-wrapper.sc-ion-alert-md {
+  --background:red;
+}
+
+ion-select::part(icon) {
+  display: none !important;
+}
+
+.drop-down-icon {
+  color: white;
+}
+
+ion-input {
+  --placeholder-color: #fff;
+  --placeholder-opacity: 1;
+}
+
+.eye-icon {
+  display: block;
+  font-size: 24px;
+  color: white;
+}
+
+.user-container .card-sheet {
+  height: 100% !important;
+}
+
+.type-toggle {
+  display: flex;
+  height: auto;
+}
+
+#globe {
+  color: white;
+  float: right;
+  margin-right: 20px;
+}
+
+#globe:active {
+  color: #01EECA;
+}
+
+ion-alert .alert-wrapper.sc-ion-alert-md {
+  background-color: #f8f4aa;
+  --background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 1)
+  );
+  box-shadow: inset 0 0 75px rgba(255, 210, 0, 0.3), inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
+}
+ion-alert .alert-title.sc-ion-alert-md {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "AustralisProSwash-Italic";
+  color: var(--ion-text-color, #fff);
+}
+ion-alert [aria-checked=true].sc-ion-alert-md .alert-radio-icon.sc-ion-alert-md {
+  border-color: #00000080;
+}
+ion-alert .alert-radio-inner.sc-ion-alert-md {
+  background-color: #00000080 !important;
+}
+ion-alert .alert-radio-label.sc-ion-alert-md {
+  white-space: pre-line !important;
+  font-family: "AustralisProSwash-Italic";
+  color: var(--ion-text-color, #000000b3);
+  font-weight: bold;
+}
+ion-alert .alert-tappable.sc-ion-alert-md {
+  height: 77px !important;
+}
+ion-alert [aria-checked=true].sc-ion-alert-md .alert-radio-label.sc-ion-alert-md {
+  color: var(--ion-color-step-850, #262626);
+}
+ion-alert .alert-button-inner.sc-ion-alert-md {
+  color: #00000080;
+  font-weight: bold;
+  font-size: larger;
+}
+
+ion-modal#example-modal {
+  padding-top: 60px;
+  padding-right: 25px;
+  align-items: start;
+  justify-content: flex-end;
+  --ion-backdrop-color:transparent;
+  --width: fit-content;
+  --min-width: 180px;
+  --height: fit-content;
+  --border-radius: 10px;
+  --background: #263054;
+  --box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.85);
+}
+ion-modal#example-modal ion-list {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  --background: #263054;
+}
+ion-modal#example-modal ion-item {
+  --background: #263054;
+  --color:white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+  border-bottom: 1px solid #0e0c0cd1;
+}
+ion-modal#example-modal ion-item:last-child {
+  border-bottom: none;
+}
+
+.active .tickmark {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  border: 8px solid white;
+}
+.active .tickmark::after {
+  content: "";
+  position: relative;
+  top: -6px;
+  right: 3px;
+  width: 4px;
+  height: 8px;
+  display: block;
+  border-radius: 1px;
+  border: solid #263054;
+  border-width: 0 2px 2px 0;
+  transform: rotate(48deg);
+  -webkit-transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+}

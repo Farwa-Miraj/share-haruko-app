@@ -1,0 +1,91 @@
+<ion-content class="user-container" [fullscreen]="true">
+  <div class="logo-section">
+    <ion-row class="banners">
+      <ion-col size="8"> 
+        </ion-col>
+      <ion-col style="padding-top: 25px;" (click)="openModal()"  expand="block"> 
+     
+        <div id="open-custom-dialog" expand="block" >
+          <svg [ngClass]="open==true? 'open' : 'globe'" xmlns="http://www.w3.org/2000/svg" width="54" height="29" viewBox="0 0 54 29" fill="none">
+            <path d="M14.5 27.4896C7.33458 27.4896 1.51041 21.6654 1.51041 14.5C1.51041 7.33457 7.33458 1.51041 14.5 1.51041C21.6654 1.51041 27.4896 7.33457 27.4896 14.5C27.4896 21.6654 21.6654 27.4896 14.5 27.4896ZM14.5 3.32291C8.3375 3.32291 3.32291 8.33749 3.32291 14.5C3.32291 20.6625 8.3375 25.6771 14.5 25.6771C20.6625 25.6771 25.6771 20.6625 25.6771 14.5C25.6771 8.33749 20.6625 3.32291 14.5 3.32291Z" fill=currentColor/>
+            <path d="M10.875 26.2812H9.66666C9.17124 26.2812 8.76041 25.8704 8.76041 25.375C8.76041 24.8796 9.14708 24.4808 9.64249 24.4688C7.74541 17.9921 7.74541 11.0079 9.64249 4.53125C9.14708 4.51917 8.76041 4.12042 8.76041 3.625C8.76041 3.12958 9.17124 2.71875 9.66666 2.71875H10.875C11.165 2.71875 11.4429 2.86375 11.6121 3.09333C11.7812 3.335 11.8296 3.63708 11.7329 3.915C9.46124 10.7421 9.46124 18.2579 11.7329 25.0971C11.8296 25.375 11.7812 25.6771 11.6121 25.9188C11.4429 26.1363 11.165 26.2812 10.875 26.2812Z" fill=currentColor/>
+            <path d="M18.125 26.2812C18.0283 26.2812 17.9317 26.2692 17.835 26.2329C17.3638 26.0758 17.0979 25.5562 17.2671 25.085C19.5388 18.2579 19.5388 10.7421 17.2671 3.90291C17.11 3.43166 17.3638 2.91208 17.835 2.75499C18.3183 2.59791 18.8258 2.85166 18.9829 3.32291C21.3875 10.5246 21.3875 18.4512 18.9829 25.6408C18.8621 26.0396 18.4996 26.2812 18.125 26.2812Z" fill=currentColor/>
+            <path d="M14.5 20.7834C11.1287 20.7834 7.76958 20.3121 4.53125 19.3575C4.51917 19.8409 4.12042 20.2396 3.625 20.2396C3.12958 20.2396 2.71875 19.8288 2.71875 19.3334V18.125C2.71875 17.835 2.86375 17.5571 3.09333 17.3879C3.335 17.2188 3.63708 17.1704 3.915 17.2671C10.7421 19.5388 18.27 19.5388 25.0971 17.2671C25.375 17.1704 25.6771 17.2188 25.9187 17.3879C26.1604 17.5571 26.2933 17.835 26.2933 18.125V19.3334C26.2933 19.8288 25.8825 20.2396 25.3871 20.2396C24.8917 20.2396 24.4929 19.8529 24.4808 19.3575C21.2304 20.3121 17.8712 20.7834 14.5 20.7834Z" fill=currentColor/>
+            <path d="M25.375 11.7812C25.2783 11.7812 25.1817 11.7691 25.085 11.7329C18.2579 9.46123 10.73 9.46123 3.90291 11.7329C3.41958 11.89 2.91208 11.6362 2.755 11.165C2.61 10.6816 2.86375 10.1741 3.335 10.0171C10.5367 7.61248 18.4633 7.61248 25.6529 10.0171C26.1242 10.1741 26.39 10.6937 26.2208 11.165C26.1121 11.5396 25.7496 11.7812 25.375 11.7812Z" fill=currentColor/>
+            <path d="M46 18L53 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M46 18L39 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </ion-col>
+      <div class="logo">
+        <app-logo-part></app-logo-part>
+      </div>
+    </ion-row>
+  </div>
+  <div class="card-sheet">
+    <div  [formGroup]="loginForm">
+      <ion-label class="ion-position">
+      <h1 class="login-label">LOGIN</h1>
+        <ion-text class="text-des">Please login your account here</ion-text>
+      </ion-label>
+      <div class="pd-top-40">
+        <ion-item lines="none">
+          <ion-input [placeholder]="'E-MAIL'"
+          formControlName="email"></ion-input>
+        </ion-item>
+        <!-- <span
+          class="text-danger"
+          *ngIf="loginFormCtrl['email'].touched && loginFormCtrl['email'].errors['requ']"
+        >
+        Email is required 
+        </span>
+        <span
+        class="text-danger"
+        *ngIf="loginFormCtrl['email'].touched && loginFormCtrl['email'].errors['Email']"
+      >
+      Email is required 
+      </span> -->
+      <div class="invalid-feedback" *ngIf="(submitted || loginFormCtrl['email'].touched) && loginFormCtrl['email'].errors">
+        <span class="text-danger" *ngIf="loginFormCtrl['email'].errors['required']">ERROR_MSGS.REQUIRED_EMAIL</span>
+        <span class="text-danger" *ngIf="loginFormCtrl['email'].errors['email']">ERROR_MSGS.NOT_VALID_EMAIL</span>
+      </div>
+        <ion-item lines="none" class="align-text-center">
+          <ion-input [placeholder]="'PASSWORD'" [type]=" showPassword? 'text' :'password'" 
+          formControlName="password"></ion-input>
+          <div  class="type-toggle" (click)="toggleShow()">
+            <svg  *ngIf="!showPassword" xmlns="http://www.w3.org/2000/svg" width="24" height="15.8" viewBox="0 0 24 16" fill="none">
+              <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12 11.9232C9.80879 11.9232 8.02561 10.14 8.02561 7.94877C8.02561 5.75756 9.80879 3.97439 12 3.97439C14.1912 3.97439 15.9744 5.75756 15.9744 7.94877C15.9744 10.14 14.1912 11.9232 12 11.9232ZM23.8543 7.65335C21.5081 2.9331 16.9667 0 12 0C7.03334 0 2.49194 2.9331 0.145725 7.65335L0 7.94877L0.145725 8.2442C2.49194 12.9644 7.03335 15.8975 12 15.8975C16.9667 15.8975 21.5081 12.9644 23.8543 8.2442L24 7.94877L23.8543 7.65335Z" fill="white"/>
+              </svg>
+            <ion-icon class="eye-icon"  *ngIf="showPassword" name="eye-off"></ion-icon>
+          </div>
+           
+        </ion-item>
+        <span class="text-danger"  *ngIf="(submitted || loginFormCtrl['password'].touched) && loginFormCtrl['password'].errors"><label>ERROR_MSGS.REQUIRED_PASSWORD</label> </span>
+
+        <ion-text class="forgot-paasword" routerLink="/reset-password/null">PASSWORD FORGOt</ion-text>
+        <br /><br />
+        <div class="row row-button">
+          <ion-button shape="round" expand="block" class="button-style" (click)="onSubmit()" [disabled]="loginForm.invalid"
+            >LOGIN</ion-button
+          >
+        </div>
+        <div class="row row-new-account">
+          <ion-text class="text-center"
+            >Create an Account? <a class="sign-up" routerLink="/register">Register</a></ion-text
+          >
+        </div>
+      </div>
+      <br/>  
+      <br/>  
+     
+    
+    </div>
+    <div class="trademark ion-text-center"  > 
+      <span class="clr-madeby">  MADE BY </span>
+      <span class="clr-name"  > appsYouu </span>
+    </div>
+  </div>
+
+ 
+</ion-content>
+   

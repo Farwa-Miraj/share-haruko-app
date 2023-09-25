@@ -1,0 +1,230 @@
+@import "../shared/mixin"  ;
+
+
+.user-container {
+  background-size: cover;
+  background-image: url(../../assets/img/young-man-barbershop-trimming-hair.png);
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px #0f1529d9;
+  --background: none;
+  --overflow: hidden;
+}
+.user-container .logo-img {
+  height: 70px;
+  padding-left: 10px;
+}
+.user-container .pd-top-40 {
+  padding-top: 40px;
+}
+.user-container .card-sheet {
+ 
+  background-size: cover;
+  background-position: center;
+  margin-top: 0px;
+  padding: 33px 33px 15px 33px;
+  position: relative;
+  top: 19.24%;
+  width: 100%;
+  backdrop-filter: none !important;
+  border-radius: 50px 50px 0px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: none;
+}
+.user-container .card-sheet ion-item {
+  font-weight: bold;
+  --background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  margin-top: 10px;
+  --padding-top: 0px;
+  --padding-start: 0;
+  height: 57px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.user-container .card-sheet ion-item ion-text[slot=end] {
+  font-size: 1rem;
+}
+
+
+.user-container .privacy {
+  color: #01e7c4;
+  font-size: 15px;
+  text-decoration: unset;
+}
+.user-container ion-footer {
+  text-align: center;
+}
+
+ion-content{
+  --ion-background-color:#111D12;
+}
+ion-select{
+  .alert-wrapper.sc-ion-alert-md {
+    --background:red;
+  }
+  
+}
+
+
+
+ion-select::part(icon) {
+  display: none !important;
+}
+
+
+
+.drop-down-icon {
+  color: white;
+}
+
+ion-input {
+  --placeholder-color: #fff;
+  --placeholder-opacity: 1;
+}
+
+.eye-icon {
+  display: block;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 1)
+  
+}
+
+
+.type-toggle{
+display: flex;
+  height:auto;
+  
+}
+.globe{
+ color: white;
+ float: right;
+ margin-right: 20px;
+}
+.globe:active {
+  color: #01EECA;
+ }
+
+ .open{
+ 
+    color: #01EECA;
+ float: right;
+ margin-right: 20px;
+   
+ }
+ ion-alert {
+  //background color
+  .alert-wrapper.sc-ion-alert-md {
+    background-color: #f8f4aa;
+    --background: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0),
+      rgba(255, 0, 0, 1)
+    );
+    box-shadow: inset 0 0 75px rgba(255, 210, 0, 0.3),
+      inset 0 0 20px rgba(255, 210, 0, 0.4),
+      inset 0 0 30px rgba(220, 120, 0, 0.8);
+  }
+ 
+  // Header Text 
+  .alert-title.sc-ion-alert-md {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "AustralisProSwash-Italic";
+    color: var(--ion-text-color, #fff);
+  }
+
+  // checkbox border color
+  [aria-checked="true"].sc-ion-alert-md .alert-radio-icon.sc-ion-alert-md {
+    border-color: #00000080;
+  }
+
+  // checkbox or radio button color
+  .alert-radio-inner.sc-ion-alert-md {
+    background-color: #00000080 !important;
+  }
+
+  // wrap the text
+  .alert-radio-label.sc-ion-alert-md {
+    white-space: pre-line !important;
+    font-family: "AustralisProSwash-Italic";
+    color: var(--ion-text-color, #000000b3);
+    font-weight: bold;
+  }
+
+  // Height of text
+  .alert-tappable.sc-ion-alert-md {
+    height: 77px !important;
+  }
+
+  // Checked text color
+  [aria-checked="true"].sc-ion-alert-md .alert-radio-label.sc-ion-alert-md {
+    color: var(--ion-color-step-850, #262626);
+  }
+
+  // Button color
+  .alert-button-inner.sc-ion-alert-md {
+    color: #00000080;
+    font-weight: bold;
+    font-size: larger;
+  }
+}
+
+ion-modal#example-modal {
+  padding-top: 60px;
+  padding-right: 25px;
+  align-items: start;
+  justify-content: flex-end;
+    --ion-backdrop-color:transparent;
+   --width: fit-content;
+  --min-width: 180px;
+  --height: fit-content;
+
+  --border-radius: 10px;
+--background: #263054;
+--box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.85);
+
+  ion-list {
+       padding-top: 0px;
+    padding-bottom: 0px;
+    --background: #263054;
+
+}
+ion-item{
+  --background: #263054;
+  --color:white;
+  @include txt (white,12px,400,20px);
+  border-bottom: 1px solid #0e0c0cd1;
+}
+
+
+ion-item:last-child{
+  border-bottom: none;
+}
+}
+
+.active{
+  .tickmark{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 8px solid white;
+  }
+  .tickmark::after{
+    content: "";
+    position: relative;
+    top: -6px;
+    right: 3px;
+    width: 4px;
+    height: 8px;
+    display: block;
+    border-radius: 1px;
+    border: solid #263054;
+    border-width: 0 2px 2px 0;
+    transform: rotate(48deg);
+    -webkit-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+  }
+}
