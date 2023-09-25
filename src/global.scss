@@ -312,18 +312,16 @@
   padding-top: 40px;
 }
 .user-container .card-sheet {
-  background: url("assets/img/Overlay.png") no-repeat;
-  background-size: cover;
-  background-position: center;
+    background-color: rgb(255, 255, 255, 0.085);
+    backdrop-filter: blur(10px);
   margin-top: 0px;
   padding: 33px 33px 15px 33px;
   position: relative;
   top: 19.24%;
   width: 100%;
-  backdrop-filter: none !important;
+
   border-radius: 50px 50px 0px 0px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: none;
 }
 .user-container .card-sheet ion-item {
   font-weight: bold;
@@ -335,7 +333,7 @@
   --padding-start: 0;
   height: 57px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(202, 43, 43, 0.5);
   border-radius: 10px;
 }
 .user-container .card-sheet ion-item ion-text[slot=end] {
