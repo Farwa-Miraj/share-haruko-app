@@ -373,7 +373,6 @@
    
     min-height: 60vh;
     max-height: 100%;
-    height: -moz-fit-content;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -382,6 +381,8 @@
     background: rgba(255, 255, 255, 0.14);
     /* background-size: cover; */
     /* background-position: center; */
+    position: relative;
+    top: 20%;
     margin-top: 0;
     padding: 33px 33px 0px;
     -webkit-backdrop-filter: blur(10px);
@@ -460,7 +461,7 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     padding: 10px 0 18%;
+     padding: 10px 0 ;
      
      width: 100%;
      z-index: 9999;
