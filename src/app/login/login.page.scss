@@ -389,8 +389,12 @@ ion-item:last-child{
     border: solid #263054;
     border-width: 0 2px 2px 0;
     transform: rotate(48deg);
-    -webkit-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg); 
     -webkit-transform: rotate(50deg);
     -ms-transform: rotate(50deg);
   }
+}
+
+.form-box{
+  height: max-content;
 }

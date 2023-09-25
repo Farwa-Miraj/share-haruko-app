@@ -23,62 +23,64 @@
     </ion-row>
   </div>
   <div class="card-sheet">
-    <div  [formGroup]="loginForm">
-      <ion-label class="ion-position">
-      <h1 class="login-label">LOGIN</h1>
-        <ion-text class="text-des">Please login your account here</ion-text>
-      </ion-label>
-      <div class="pd-top-40">
-        <ion-item lines="none">
-          <ion-input [placeholder]="'E-MAIL'"
-          formControlName="email"></ion-input>
-        </ion-item>
-        <!-- <span 
+    <div class="form-box">
+      <div  [formGroup]="loginForm">
+        <ion-label class="ion-position">
+        <h1 class="login-label">LOGIN</h1>
+          <ion-text class="text-des">Please login your account here</ion-text>
+        </ion-label>
+        <div class="pd-top-40">
+          <ion-item lines="none">
+            <ion-input [placeholder]="'E-MAIL'"
+            formControlName="email"></ion-input>
+          </ion-item>
+          <!-- <span 
+            class="text-danger"
+            *ngIf="loginFormCtrl['email'].touched && loginFormCtrl['email'].errors['requ']"
+          >
+          Email is required 
+          </span>
+          <span
           class="text-danger"
-          *ngIf="loginFormCtrl['email'].touched && loginFormCtrl['email'].errors['requ']"
+          *ngIf="loginFormCtrl['email'].touched && loginFormCtrl['email'].errors['Email']"
         >
         Email is required 
-        </span>
-        <span
-        class="text-danger"
-        *ngIf="loginFormCtrl['email'].touched && loginFormCtrl['email'].errors['Email']"
-      >
-      Email is required 
-      </span> -->
-      <div class="invalid-feedback" *ngIf="(submitted || loginFormCtrl['email'].touched) && loginFormCtrl['email'].errors">
-        <span class="text-danger" *ngIf="loginFormCtrl['email'].errors['required']">ERROR_MSGS.REQUIRED_EMAIL</span>
-        <span class="text-danger" *ngIf="loginFormCtrl['email'].errors['email']">ERROR_MSGS.NOT_VALID_EMAIL</span>
-      </div>
-        <ion-item lines="none" class="align-text-center">
-          <ion-input [placeholder]="'PASSWORD'" [type]=" showPassword? 'text' :'password'" 
-          formControlName="password"></ion-input>
-          <div  class="type-toggle" (click)="toggleShow()">
-            <svg  *ngIf="!showPassword" xmlns="http://www.w3.org/2000/svg" width="24" height="15.8" viewBox="0 0 24 16" fill="none">
-              <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12 11.9232C9.80879 11.9232 8.02561 10.14 8.02561 7.94877C8.02561 5.75756 9.80879 3.97439 12 3.97439C14.1912 3.97439 15.9744 5.75756 15.9744 7.94877C15.9744 10.14 14.1912 11.9232 12 11.9232ZM23.8543 7.65335C21.5081 2.9331 16.9667 0 12 0C7.03334 0 2.49194 2.9331 0.145725 7.65335L0 7.94877L0.145725 8.2442C2.49194 12.9644 7.03335 15.8975 12 15.8975C16.9667 15.8975 21.5081 12.9644 23.8543 8.2442L24 7.94877L23.8543 7.65335Z" fill="white"/>
-              </svg>
-            <ion-icon class="eye-icon"  *ngIf="showPassword" name="eye-off"></ion-icon>
+        </span> -->
+        <div class="invalid-feedback" *ngIf="(submitted || loginFormCtrl['email'].touched) && loginFormCtrl['email'].errors">
+          <span class="text-danger" *ngIf="loginFormCtrl['email'].errors['required']">ERROR_MSGS.REQUIRED_EMAIL</span>
+          <span class="text-danger" *ngIf="loginFormCtrl['email'].errors['email']">ERROR_MSGS.NOT_VALID_EMAIL</span>
+        </div>
+          <ion-item lines="none" class="align-text-center">
+            <ion-input [placeholder]="'PASSWORD'" [type]=" showPassword? 'text' :'password'" 
+            formControlName="password"></ion-input>
+            <div  class="type-toggle" (click)="toggleShow()">
+              <svg  *ngIf="!showPassword" xmlns="http://www.w3.org/2000/svg" width="24" height="15.8" viewBox="0 0 24 16" fill="none">
+                <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M12 11.9232C9.80879 11.9232 8.02561 10.14 8.02561 7.94877C8.02561 5.75756 9.80879 3.97439 12 3.97439C14.1912 3.97439 15.9744 5.75756 15.9744 7.94877C15.9744 10.14 14.1912 11.9232 12 11.9232ZM23.8543 7.65335C21.5081 2.9331 16.9667 0 12 0C7.03334 0 2.49194 2.9331 0.145725 7.65335L0 7.94877L0.145725 8.2442C2.49194 12.9644 7.03335 15.8975 12 15.8975C16.9667 15.8975 21.5081 12.9644 23.8543 8.2442L24 7.94877L23.8543 7.65335Z" fill="white"/>
+                </svg>
+              <ion-icon class="eye-icon"  *ngIf="showPassword" name="eye-off"></ion-icon>
+            </div>
+             
+          </ion-item>
+          <span class="text-danger"  *ngIf="(submitted || loginFormCtrl['password'].touched) && loginFormCtrl['password'].errors"><label>ERROR_MSGS.REQUIRED_PASSWORD</label> </span>
+  
+          <ion-text class="forgot-paasword" routerLink="/reset-password/null">PASSWORD FORGOt</ion-text>
+          <br /><br />
+          <div class="row row-button">
+            <ion-button shape="round" expand="block" class="button-style" (click)="onSubmit()" [disabled]="loginForm.invalid"
+              >LOGIN</ion-button
+            >
           </div>
-           
-        </ion-item>
-        <span class="text-danger"  *ngIf="(submitted || loginFormCtrl['password'].touched) && loginFormCtrl['password'].errors"><label>ERROR_MSGS.REQUIRED_PASSWORD</label> </span>
-
-        <ion-text class="forgot-paasword" routerLink="/reset-password/null">PASSWORD FORGOt</ion-text>
-        <br /><br />
-        <div class="row row-button">
-          <ion-button shape="round" expand="block" class="button-style" (click)="onSubmit()" [disabled]="loginForm.invalid"
-            >LOGIN</ion-button
-          >
+          <div class="row row-new-account">
+            <ion-text class="text-center"
+              >Create an Account? <a class="sign-up" routerLink="/register">Register</a></ion-text
+            >
+          </div>
         </div>
-        <div class="row row-new-account">
-          <ion-text class="text-center"
-            >Create an Account? <a class="sign-up" routerLink="/register">Register</a></ion-text
-          >
-        </div>
+        <br/>  
+        <br/>  
+       
+      
       </div>
-      <br/>  
-      <br/>  
-     
-    
     </div>
     <div class="trademark ion-text-center"  > 
       <span class="clr-madeby">  MADE BY </span>
