@@ -378,8 +378,11 @@
     background-position: center;
     margin-top: 0;
     padding: 33px 33px 15px;
-    position: absolute;
-    top: 40%;
+    // position: absolute;
+    // bottom: 0px;
+    position: relative;
+    top: 20%;
+    
     min-height: 60%;
     max-height: 100%;
     height: fit-content;
