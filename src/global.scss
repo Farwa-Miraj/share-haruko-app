@@ -302,7 +302,6 @@
   background-size: cover;
   box-shadow: inset 0 0 0 2000px #0f1529d9;
   --background: none;
-  --overflow: hidden;
 }
 .user-container .logo-img {
   height: 70px;
@@ -321,7 +320,7 @@
   width: 100%;
 
   border-radius: 50px 50px 0px 0px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2); 
 }
 .user-container .card-sheet ion-item {
   font-weight: bold;
