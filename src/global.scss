@@ -343,13 +343,16 @@
  
  .user-container {
    .logo-img {
-     height: 70px;
-     padding-left: 10px;
+    height: 8vh;
+    padding-left: 10px;
    }
  
    .pd-top-40 {
      padding-top: 40px;
  
+   }
+   .logo-section{
+    height: 40%;
    }
  
    background-size: cover;
@@ -380,8 +383,7 @@
     background: rgba(255, 255, 255, 0.14);
     /* background-size: cover; */
     /* background-position: center; */
-    position: relative;
-    top: 20%;
+   
     margin-top: 0;
     padding: 33px 33px 0px;
     -webkit-backdrop-filter: blur(10px);
@@ -467,9 +469,10 @@
    }
  
    .logo-label {
-     font-size: 30px;
-     padding-top: 10px;
-     color: white;
+    font-size: min(10vw, 26px);
+    padding-top: 10px;
+    color: white;
+}
    }
  
    .ion-position {
